@@ -21,14 +21,7 @@ class Actions extends Component{
     }
 
     render(){
-        const RenderActions = this.state.actions.map((key)=>{
-            return <button key={key.id}>{key.value}</button>
-        });
-        return(
-            <div className="actions">
-                {RenderActions}
-            </div>
-        )
+
     }
 }
 

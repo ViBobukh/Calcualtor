@@ -1,0 +1,17 @@
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  button{
+    border-radius: 13%;
+    font-size: 110%;
+    box-shadow: none;
+    height: 34px;
+    width: 70px;
+  }
+  .action{
+    background: #ff8624;
+  }
+  .number{
+    background: darkgrey;
+  }
+}

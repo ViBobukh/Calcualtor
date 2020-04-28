@@ -5,7 +5,9 @@ import "../style/App.scss"
 function App() {
     return(
         <>
+            <h1>Calculator</h1>
             <CalcBody/>
+            <p>by ViBobukh</p>
         </>
     )
 }
