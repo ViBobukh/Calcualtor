@@ -1,6 +1,4 @@
 import React, {Component} from "react";
-import Actions from "./Actions.js";
-import Numbers from "./Numbers.js";
 import "../style/Buttons.scss"
 
 class Buttons extends Component{
@@ -18,6 +16,7 @@ class Buttons extends Component{
     }
 
 
+
     render(){
         const RenderButtons = this.state.buttons.map((key)=>{
             return <button
@@ -29,9 +28,11 @@ class Buttons extends Component{
             >{key.value}</button>
         });
         return(
+
             <div className="buttons">
                 {RenderButtons}
             </div>
+
         )
     }
 }

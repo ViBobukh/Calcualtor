@@ -1,28 +1,30 @@
 import React, {Component} from "react";
-import "../style/Actions.scss"
-
-class Actions extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            actions: [
-                {value: "AC", id: "AC"},
-                {value: "√", id: "√"},
-                {value: "²", id: "²"},
-                {value: "/", id: "/"},
-                {value: "*", id: "*"},
-                {value: "+", id: "+"},
-                {value: "-", id: "-"},
-                {value: "=", id: "="},
+import "../style/Actions.scss";
+import * as MathLib from "./lib/Math.js"
 
 
-            ]
+
+    function Actions(props) {
+        const objFunc ={
+            '/': MathLib.division,
+            '*': MathLib.multiplication,
+            '-': MathLib.minus,
+            '+': MathLib.plus,
+            '√': MathLib.squareRoot,
+            '²': MathLib.square,
+        };
+
+        let numbers = props.value.split(props.act);
+        let result = 0;
+        for(let i in objFunc){
+            if (objFunc[i] === props.act) {
+                result = objFunc[i](numbers[0], numbers[2])
+            }
         }
-    }
-
-    render(){
+        props.newValue(result)
 
     }
-}
+
+
 
 export default Actions;
