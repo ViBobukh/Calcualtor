@@ -7,7 +7,7 @@ function App() {
         <>
             <h1>Calculator</h1>
             <CalcBody/>
-            <p>by ViBobukh</p>
+            <p className="author">by ViBobukh</p>
         </>
     )
 }
